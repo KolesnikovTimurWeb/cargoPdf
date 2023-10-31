@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+   <title>AdultCare</title>
+
+   <link rel="stylesheet" href="./css/swiper-bundle2.min.css">
+   <link rel="stylesheet" href="./css/style.css">
+
+
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+   <main>
+
+
+      <section class="section register">
+         <div class="logo">
+            <img src="./img/logo.svg" alt="">
+         </div>
+
+
+         <div class="global active">
+            <h1>Заполнение данных </h1>
+            <div class="global-block container">
+               <h2>Данные о перевозчике:</h2>
+               <form class="global-form">
+                  <input type="text" class="fullname-vehichal" placeholder="Полное наименование">
+                  <input type="text" placeholder="ФИО Генерального директора">
+                  <input type="text" placeholder="ИНН">
+                  <input type="text" placeholder="Тип заявителя">
+                  <input type="text" placeholder="ОГРН">
+                  <input type="text" placeholder="ОГРНИП">
+               </form>
+            </div>
+            <div class="global-block container">
+               <h2>Контактная информация:</h2>
+               <form class="global-form">
+                  <input type="text" class="tel-vehichal" placeholder="Мобильный телефон">
+                  <input type="text" class="email-vehichal" placeholder="Email">
+               </form>
+            </div>
+            <div class="global-block container">
+               <h2>Сведения о тягаче:</h2>
+               <form class="global-form">
+                  <input type="text" class="markcar-vehichal" placeholder="Марка тягача">
+                  <input type="text" class="modelcar-vehichal" placeholder="Модель тягача">
+               </form>
+            </div>
+            <div class="global-block container">
+               <h2> Адрес регистрации:</h2>
+               <form class="global-form">
+                  <input type="text" class="country-vehichal" placeholder="Страна регистрации">
+                  <input type="text" placeholder="Регион">
+                  <input type="text" class="city-vehichal" placeholder="Город">
+                  <input type="text" class="raon-vehichal" placeholder="Район">
+                  <input type="text" placeholder="Улица">
+                  <input type="text" class="house-vehichal" placeholder="Дом">
+                  <input type="text" placeholder="Строение">
+                  <input type="text" class="numberhouse-vehichal" placeholder="Квартира">
+               </form>
+            </div>
+            <div class="global-block container">
+               <h2>Сведения о грузе:</h2>
+               <form class="global-form">
+                  <input type="text" placeholder="Тип груза">
+                  <input type="text" class="name-track-vehichal" placeholder="Наименование груза ">
+                  <input type="number" class="weight-vehichal" placeholder="Масса (т)">
+                  <input type="number" class="lenght-vehichal" placeholder="Длинна (м)">
+                  <input type="number" class="width-vehichal" placeholder="Ширина, (м)">
+                  <input type="number" class="height-vehichal" placeholder="Высота (м)">
+                  <input type="text" placeholder="ОГРНИП">
+               </form>
+            </div>
+         </div>
+      </section>
+
+   </main>
+
+</body>
+<script>
+   let weightVehichal = localStorage.getItem('weight-vehichal')
+   let heightVehichal = localStorage.getItem('height-vehichal')
+   let lenghtVehichal = localStorage.getItem('lenght-vehichal')
+   let widthVehichal = localStorage.getItem('width-vehichal')
+   let nameTrackVehichal = localStorage.getItem('name-track-vehichal')
+   let fullnamekVehichal = localStorage.getItem('fullname-vehichal')
+   let countryVehichal = localStorage.getItem('country-vehichal')
+   let cityVehichal = localStorage.getItem('city-vehichal')
+   let raonVehichal = localStorage.getItem('raon-vehichal')
+   let houseVehichal = localStorage.getItem('house-vehichal')
+   let emailVehichal = localStorage.getItem('email-vehichal')
+   let namelVehichal = localStorage.getItem('name-vehichal')
+   let markCarlVehichal = localStorage.getItem('markcar-vehichal')
+   let modelCarlVehichal = localStorage.getItem('modelcar-vehichal')
+   let telVehichal = localStorage.getItem('tel-vehichal')
+
+   document.querySelector('.tel-vehichal').value = telVehichal
+   document.querySelector('.city-vehichal').value = cityVehichal
+   document.querySelector('.markcar-vehichal').value = markCarlVehichal
+   document.querySelector('.modelcar-vehichal').value = modelCarlVehichal
+
+   document.querySelector('.email-vehichal').value = emailVehichal
+   document.querySelector('.house-vehichal').value = houseVehichal
+   document.querySelector('.country-vehichal').value = countryVehichal
+   document.querySelector('.fullname-vehichal').value = fullnamekVehichal
+   document.querySelector('.name-track-vehichal').value = nameTrackVehichal
+   document.querySelector('.weight-vehichal').value = weightVehichal
+   document.querySelector('.lenght-vehichal').value = lenghtVehichal
+   document.querySelector('.width-vehichal').value = widthVehichal
+   document.querySelector('.height-vehichal').value = heightVehichal
+   document.querySelector('.raon-vehichal').value = raonVehichal
+   let inputs = document.querySelectorAll('input')
+   inputs.forEach(el => {
+
+      el.disabled = true
+   })
+</script>
+
+</html>

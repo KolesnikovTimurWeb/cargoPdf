@@ -4,6 +4,8 @@ let globalBlock = document.querySelector('.global')
 let buttonRegister = document.querySelector('.button-register')
 let buttonLogin = document.querySelector('.register-back')
 
+let inputs = document.querySelectorAll('input')
+
 buttonRegister.addEventListener('click', function () {
    loginBLock.classList.remove('active')
    registerBLock.classList.add('active')
@@ -56,3 +58,59 @@ loginBLock.addEventListener('submit', function (ev) {
    globalBlock.classList.add('active')
 })
 
+
+
+inputs.forEach(el => {
+   el.addEventListener('change', function () {
+      console.log(el.classList.value.includes('input'))
+      if (el.classList.value.includes('weight-vehichal')) {
+         localStorage.setItem('weight-vehichal', el.value)
+      }
+      if (el.classList.value.includes('lenght-vehichal')) {
+         localStorage.setItem('lenght-vehichal', el.value)
+      }
+      if (el.classList.value.includes('height-vehichal')) {
+         localStorage.setItem('height-vehichal', el.value)
+      }
+      if (el.classList.value.includes('width-vehichal')) {
+         localStorage.setItem('width-vehichal', el.value)
+      }
+      if (el.classList.value.includes('name-track-vehichal')) {
+         localStorage.setItem('name-track-vehichal', el.value)
+      }
+      if (el.classList.value.includes('fullname-vehichal')) {
+         localStorage.setItem('fullname-vehichal', el.value)
+      }
+      if (el.classList.value.includes('country-vehichal')) {
+         localStorage.setItem('country-vehichal', el.value)
+      }
+      if (el.classList.value.includes('city-vehichal')) {
+         localStorage.setItem('city-vehichal', el.value)
+      }
+      if (el.classList.value.includes("raon-vehichal")) {
+         localStorage.setItem("raon-vehichal", el.value)
+      }
+      if (el.classList.value.includes("house-vehichal")) {
+         localStorage.setItem("house-vehichal", el.value)
+      }
+      if (el.classList.value.includes("numberhouse-vehichal")) {
+         localStorage.setItem("numberhouse-vehichal", el.value)
+      }
+      if (el.classList.value.includes("email-vehichal")) {
+         localStorage.setItem("email-vehichal", el.value)
+      }
+      if (el.classList.value.includes("name-vehichal")) {
+         localStorage.setItem("name-vehichal", el.value)
+      }
+      if (el.classList.value.includes("markcar-vehichal")) {
+         localStorage.setItem("markcar-vehichal", el.value)
+      }
+      if (el.classList.value.includes("modelcar-vehichal")) {
+         localStorage.setItem("modelcar-vehichal", el.value)
+      }
+      if (el.classList.value.includes("tel-vehichal")) {
+         localStorage.setItem("tel-vehichal", el.value)
+      }
+
+   })
+})

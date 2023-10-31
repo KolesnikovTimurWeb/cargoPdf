@@ -251,6 +251,18 @@ header{
    gap: 10px;
    
 }
+.red-button{
+   display: flex;
+   align-items: center;
+   border-radius: 20px;
+    transition: .2s ease-in-out;
+    background: #A52221;
+    padding: 15px 90px;
+    margin-top: 50px;
+    color: #FFF;
+    font-size: 20px;
+    font-weight: 500;
+}
 .global.active{
    display: flex;
 }
